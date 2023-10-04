@@ -30,11 +30,16 @@
     </div>
   </nav>
     <div class="container mt-4">
-        <h1>Shopping List Page</h1>
+        <h1 mb-3>Shopping List Page</h1>
 
 <table id="product_table"></table>
+<h5 class="mt-2">Sesi terakhir login: {{ last_login }}</h5>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Product by AJAX</button>
-
+<div>
+<a href="{% url 'main:create_product' %}" class="btn btn-success mt-2">
+    Add New Product
+</a>
+</div>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
